@@ -266,8 +266,13 @@ var muttcube = {
                 return rcmail;
             },
             init: function(){
+                muttcube.exec_on_enter = false;
                 $('#muttcube-statusbar-message').hide();
                 $('#muttcube-command').show();
+                $('#muttcube-command-input').focus();
+            },
+            finish: function(){
+                muttcube.exec_on_enter = true;
             },
         }
     }, 
