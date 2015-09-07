@@ -5,7 +5,7 @@ $(function() {
     muttcube.set_status_bar();
 
     $('body').keydown(function(e){
-        return muttator_key_handle(e);
+        return muttcube_key_handle(e);
     });
 
     $("textarea, input").focus(function(ev){
@@ -19,7 +19,8 @@ $(function() {
         }
     });
 
-    function muttator_key_handle(ev){
+    function muttcube_key_handle(ev){
+        console.log('ev', ev);
         var flags = (ev.altKey ? '1' : '0') + 
             (ev.ctrlKey ? '1' : '0') + 
             (ev.metaKey ? '1' : '0') + 
