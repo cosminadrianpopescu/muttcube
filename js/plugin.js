@@ -14,13 +14,12 @@ $(function() {
             muttcube.commands.change_mode("insert");
         }
     }).blur(function(ev){
-        if ($(ev.currentTarget).attr('id') != 'muttcube-focus'){
+        if ($(ev.currentTarget).attr('id') != 'muttcube-focus' && $(ev.currentTarget).attr('id') != 'muttcube-command-input'){
             muttcube.commands.change_mode(muttcube.modes[muttcube.current_mode].prev_mode());
         }
     });
 
     function muttcube_key_handle(ev){
-        console.log('ev', ev);
         var flags = (ev.altKey ? '1' : '0') + 
             (ev.ctrlKey ? '1' : '0') + 
             (ev.metaKey ? '1' : '0') + 
