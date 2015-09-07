@@ -3,14 +3,14 @@
    http://pear.php.net/dtd/tasks-1.0.xsd
    http://pear.php.net/dtd/package-2.0
    http://pear.php.net/dtd/package-2.0.xsd">
-	<name>Roundcube Muttator</name>
+	<name>Muttcube</name>
 	<lead>
 		<name>Cosmin Popescu</name>
 		<user>cosminadrianpopescu</user>
 		<email>cosmin@popescu.eu.com</email>
 		<active>yes</active>
 	</lead>
-	<uri>https://github.com/cosminadrianpopescu/roundcube_muttator</uri>
+	<uri>https://github.com/cosminadrianpopescu/muttcube</uri>
 	<version>
 		<release>1.0</release>
 	</version>
