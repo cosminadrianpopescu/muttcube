@@ -15,7 +15,9 @@ $(function() {
         }
     }).blur(function(ev){
         if ($(ev.currentTarget).attr('id') != 'muttcube-focus'){
-            muttcube.commands.change_mode(muttcube.modes[muttcube.current_mode].prev_mode());
+            if ($(ev.currentTarget).attr('id') != 'muttcube-command-input' || muttcube.current_mode == 'command'){
+                muttcube.commands.change_mode(muttcube.modes[muttcube.current_mode].prev_mode());
+            }
         }
     });
 
