@@ -12,6 +12,8 @@
 /** *
  **/
 
+error_reporting(E_ALL);
+
 class muttcube extends rcube_plugin
 {
     public $task = 'mail|compose';
