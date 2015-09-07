@@ -770,7 +770,6 @@ var muttcube = {
         },
 
         finish_command: function(){
-            $('#muttcube-command-input').blur();
             $('#muttcube-statusbar-message').show();
             $('#muttcube-command').hide();
         },
