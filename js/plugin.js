@@ -15,7 +15,7 @@ $(function() {
         }
     }).blur(function(ev){
         if ($(ev.currentTarget).attr('id') != 'muttcube-focus'){
-            muttcube.commands.change_mode(muttcube.modes.insert.prev_mode());
+            muttcube.commands.change_mode(muttcube.modes[muttcube.current_mode].prev_mode());
         }
     });
 
