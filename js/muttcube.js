@@ -269,7 +269,6 @@ var muttcube = {
                 muttcube.exec_on_enter = false;
                 $('#muttcube-statusbar-message').hide();
                 $('#muttcube-command').show();
-                $('#muttcube-command-input').focus().width($('#muttcube-statusbar').width() - $('#muttcube-statusbar-current-mode').width() - $('#muttcube-statusbar-keychain').width() - 10);
             },
             finish: function(){
                 muttcube.exec_on_enter = true;
@@ -773,6 +772,11 @@ var muttcube = {
             $('#muttcube-statusbar-message').show();
             $('#muttcube-command').hide();
         },
+
+        enter_command_mode: function(){
+            this.change_mode('command');
+            $('#muttcube-command-input').focus().width($('#muttcube-statusbar').width() - $('#muttcube-statusbar-current-mode').width() - $('#muttcube-statusbar-keychain').width() - 10);
+        }
     },
 };
 
