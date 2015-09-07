@@ -273,7 +273,7 @@ var muttcube = {
             },
             finish: function(){
                 muttcube.exec_on_enter = true;
-                muttcube.finish_command();
+                muttcube.commands.finish_command();
             },
         }
     }, 
