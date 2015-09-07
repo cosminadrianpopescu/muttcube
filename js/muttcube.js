@@ -273,6 +273,8 @@ var muttcube = {
             },
             finish: function(){
                 muttcube.exec_on_enter = true;
+                $('#muttcube-statusbar-message').show();
+                $('#muttcube-command').hide();
             },
         }
     }, 
