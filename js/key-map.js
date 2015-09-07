@@ -127,6 +127,9 @@ MuttatorKeys = {
         key_0001__59: {
             command: "muttcube.commands.change_mode('command')",
         },
+        key_0001__186: {
+            command: "muttcube.commands.change_mode('command')",
+        },
         key_0000__191: {
             command: "$('#quicksearchbox').focus()",
         },
