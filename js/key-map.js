@@ -114,6 +114,19 @@ MuttatorKeys = {
         key_0001_V: {
             command: 'muttcube.commands.preview_toggle()',
         },
+        key_0001_3: {
+            chain: {
+                key_0000_F: {
+                    command: 'muttcube.commands.quick_search("from", -1)', 
+                },
+                key_0000_T: {
+                    command: 'muttcube.commands.quick_search("to", -1)', 
+                },
+            },
+        },
+        key_0001_59: {
+            command: "muttcube.commands.change_mode('command')",
+        },
         key_0000__191: {
             command: "$('#quicksearchbox').focus()",
         },
@@ -124,16 +137,6 @@ MuttatorKeys = {
                 },
                 key_0000_T: {
                     command: 'muttcube.commands.quick_search("to", 1)', 
-                },
-            },
-        },
-        key_0001_3: {
-            chain: {
-                key_0000_F: {
-                    command: 'muttcube.commands.quick_search("from", -1)', 
-                },
-                key_0000_T: {
-                    command: 'muttcube.commands.quick_search("to", -1)', 
                 },
             },
         },
@@ -392,6 +395,11 @@ MuttatorKeys = {
         },
         key_0000__13: {
             command: "muttcube._rcmail.compose_add_recipient('to')",
+        },
+    },
+    mode_command: {
+        key_0000__13: {
+            command: "muttcube.commands.execute_js()",
         },
     },
 }
