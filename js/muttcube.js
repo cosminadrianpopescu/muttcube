@@ -53,13 +53,13 @@ var muttcube = {
 
     modes: {
         normal: {
-            text: muttcube.gettext("normalmode.text"), 
+            text: muttcube_i18n.gettext("normalmode.text"), 
             get_rcmail: function(){
                 return top.window.rcmail;
             },
         },
         message: {
-            text: muttcube.gettext("messagemode.text"),
+            text: muttcube_i18n.gettext("messagemode.text"),
             get_context: function(){
                 return $('#messagecontframe').length > 0 ? $('#messagecontframe').contents() : $(document);
             },
@@ -76,7 +76,7 @@ var muttcube = {
             },
         },
         follow_links: {
-            text: muttcube.gettext("followliksmode.text"), 
+            text: muttcube_i18n.gettext("followliksmode.text"), 
             selector: '#messagebody a,#attachment-list a[class != "drop"]',
             init: function(){
                 muttcube.exec_on_enter = false;
@@ -105,7 +105,7 @@ var muttcube = {
             },
         },
         message_caret: {
-            text: muttcube.gettext("messagecaretmode.text"), 
+            text: muttcube_i18n.gettext("messagecaretmode.text"), 
             view_html: true, 
             init: function(){
                 if (rcmail.env.action == ''){
@@ -133,7 +133,7 @@ var muttcube = {
             },
         },
         visual: {
-            text: muttcube.gettext("visualmode.text"), 
+            text: muttcube_i18n.gettext("visualmode.text"), 
             leave_selection: false, 
             get_context: function(){
                 return $(top.document);
@@ -160,7 +160,7 @@ var muttcube = {
             },
         },
         folders: {
-            text: muttcube.gettext("foldersmode.text"), 
+            text: muttcube_i18n.gettext("foldersmode.text"), 
             get_context: function(){
                 return $(top.document);
             },
@@ -179,7 +179,7 @@ var muttcube = {
             }
         },
         compose: {
-            text: muttcube.gettext("composemode.txt"), 
+            text: muttcube_i18n.gettext("composemode.txt"), 
             get_context: function(){
                 return $(document);
             },
@@ -191,7 +191,7 @@ var muttcube = {
             },
         },
         insert: {
-            text: muttcube.gettext("insertmode.txt"), 
+            text: muttcube_i18n.gettext("insertmode.txt"), 
             old_mode: null, 
             get_context: function(){
                 return $(document);
@@ -210,7 +210,7 @@ var muttcube = {
             }
         },
         att_delete: {
-            text: muttcube.gettext("attdeletemode.txt"), 
+            text: muttcube_i18n.gettext("attdeletemode.txt"), 
             get_context: function(){
                 return $(document);
             },
@@ -230,7 +230,7 @@ var muttcube = {
             },
         },
         contacts: {
-            text: muttcube.gettext('contactsmode.txt'), 
+            text: muttcube_i18n.gettext('contactsmode.txt'), 
             comming_from: null, 
             get_context: function(){
                 return $(document);
@@ -343,11 +343,11 @@ var muttcube = {
                         break;
                     }
                 }
-                var msg = muttcube.gettext("search.result", {idx: this.results[next_idx].m, count: count, s: (count > 1 ? 's' : '')}, 'message');
+                var msg = muttcube_i18n.gettext("search.result", {idx: this.results[next_idx].m, count: count, s: (count > 1 ? 's' : '')}, 'message');
                 muttcube.print_status_bar(msg)
             }
             else {
-                muttcube.print_status_bar(muttcube.gettext("search.noresult"), 'message')
+                muttcube.print_status_bar(muttcube_i18n.gettext("search.noresult"), 'message')
             }
         },
     }, 
@@ -744,7 +744,7 @@ var muttcube = {
 
         toggle_enabled: function(){
             muttcube.disabled = !muttcube.disabled;
-            muttcube.print_status_bar(muttcube.disabled ? muttcube.gettext("disabled") : "");
+            muttcube.print_status_bar(muttcube.disabled ? muttcube_i18n.gettext("disabled") : "");
         },
     },
 };
