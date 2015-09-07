@@ -273,6 +273,7 @@ var muttcube = {
             },
             finish: function(){
                 muttcube.exec_on_enter = true;
+                muttcube.finish_command();
             },
         }
     }, 
@@ -769,6 +770,7 @@ var muttcube = {
         },
 
         finish_command: function(){
+            $('#muttcube-command-input').blur();
             $('#muttcube-statusbar-message').show();
             $('#muttcube-command').hide();
         },
