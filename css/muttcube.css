@@ -1,0 +1,102 @@
+.follow-link {
+    font: monospace;
+    font-size: 10px;
+    background-color: red;
+    font-weight: bold;
+    color: white;
+}
+
+.link-background {
+    background-color: yellow;
+}
+
+.link-background-default {
+    background-color: #004000 !important;
+}
+
+.hidden {
+    display: none;
+}
+
+.muttcube-current-folder {
+    background-color: #9DCEE3 !important;
+}
+
+#muttcube-focus {
+    position: absolute; 
+    top: -60px;
+}
+
+#muttcube-statusbar {
+    position: fixed;
+    font-size: 10px;
+    height: 14px;
+    text-align: left;
+    padding-top: 2px;
+}
+
+#muttcube-statusbar-keychain {
+    float: right;
+    width: 120px;
+}
+
+#muttcube-statusbar-message {
+    float: left;
+    padding-left: 15px;
+}
+
+#muttcube-statusbar-current-mode {
+    float: left;
+    width: 180px;
+    padding-left: 3px;
+}
+
+.statusbar-normal-mode {
+    background-color: #444444;
+    color: #5fffaf;
+}
+
+.statusbar-message-mode {
+    background-color: #00005f;
+    color: white;
+}
+
+.statusbar-follow_links-mode {
+    background-color: #00005f;
+    color: yellow;
+}
+
+.statusbar-message_caret-mode {
+    background-color: #5f0000;
+    color: white;
+}
+
+.statusbar-visual-mode {
+    background-color: #5f005f;
+    color: white;
+}
+
+.statusbar-folders-mode {
+    background-color: #005f00;
+    color: white;
+}
+
+.statusbar-compose-mode {
+    background-color: #00005f;
+    color: white;
+}
+
+.statusbar-insert-mode {
+    background-color: yellow;
+    color: black;
+}
+
+.statusbar-att_delete-mode {
+    background-color: #005f00;
+    color: white;
+}
+
+.statusbar-contacts-mode {
+    background-color: #5f005f;
+    color: white;
+}
