@@ -254,6 +254,22 @@ var muttcube = {
                 muttcube.exec_on_enter = true;
             },
         },
+        command: {
+            text: muttcube_i18n.gettext('commandmode.txt'), 
+            get_context: function(){
+                return $(document);
+            },
+            prev_mode: function(){
+                return muttcube._rcmail.env.action == "" ? 'normal' : 'compose';
+            },
+            get_rcmail: function(){
+                return rcmail;
+            },
+            init: function(){
+                $('#muttcube-statusbar-message').hide();
+                $('#muttcube-command').show();
+            },
+        }
     }, 
 
     get_message_frame: function(){
@@ -745,6 +761,11 @@ var muttcube = {
         toggle_enabled: function(){
             muttcube.disabled = !muttcube.disabled;
             muttcube.print_status_bar(muttcube.disabled ? muttcube_i18n.gettext("disabled") : "");
+        },
+
+        finish_command: function(){
+            $('#muttcube-statusbar-message').show();
+            $('#muttcube-command').hide();
         },
     },
 };
