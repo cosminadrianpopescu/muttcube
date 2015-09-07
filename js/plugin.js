@@ -9,15 +9,13 @@ $(function() {
     });
 
     $("textarea, input").focus(function(ev){
-        if ($(ev.currentTarget).attr('id') != 'muttcube-focus' && $(ev.currentTarget).attr('type') != 'file' && $(ev.currentTarget).attr('id') != 'muttcube-command-input'){
+        if ($(ev.currentTarget).attr('id') != 'muttcube-focus' && $(ev.currentTarget).attr('type') != 'file'){
             muttcube.modes.insert.old_mode = muttcube.current_mode;
             muttcube.commands.change_mode("insert");
         }
     }).blur(function(ev){
         if ($(ev.currentTarget).attr('id') != 'muttcube-focus'){
-            if ($(ev.currentTarget).attr('id') != 'muttcube-command-input' || muttcube.current_mode == 'command'){
-                muttcube.commands.change_mode(muttcube.modes[muttcube.current_mode].prev_mode());
-            }
+            muttcube.commands.change_mode(muttcube.modes[muttcube.current_mode].prev_mode());
         }
     });
 
