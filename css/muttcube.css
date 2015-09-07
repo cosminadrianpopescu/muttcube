@@ -86,6 +86,11 @@
     color: white;
 }
 
+.statusbar-command-mode {
+    background-color: #800000;
+    color: white;
+}
+
 .statusbar-insert-mode {
     background-color: yellow;
     color: black;
@@ -102,7 +107,8 @@
 }
 
 #muttcube-command-input {
+    padding: 0px !important;
+    background: transparent;
     font-size: 10px;
     height: 14px;
-    background-color: #444444;
 }
