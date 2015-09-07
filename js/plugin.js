@@ -20,6 +20,7 @@ $(function() {
     });
 
     function muttcube_key_handle(ev){
+        console.log('ev', ev);
         var flags = (ev.altKey ? '1' : '0') + 
             (ev.ctrlKey ? '1' : '0') + 
             (ev.metaKey ? '1' : '0') + 
