@@ -42,7 +42,7 @@ $(function() {
             if (ev.which == 27){
                 muttcube.commands.change_mode(muttcube.modes[muttcube.current_mode].prev_mode());
             }
-            if (ev.which == 13 && muttcube.current_mode == 'command'){
+            if (ev.which == 13 && muttcube.current_mode == 'insert' && muttcube.modes[muttcube.current_mode].prev_mode() == 'command'){
                 muttcube.commands.change_mode(muttcube.modes[muttcube.current_mode].prev_mode());
             }
             return true;
