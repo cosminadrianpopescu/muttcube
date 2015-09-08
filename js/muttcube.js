@@ -269,10 +269,6 @@ var muttcube = {
                 muttcube.exec_on_enter = false;
                 $('#muttcube-statusbar-message').hide();
                 $('#muttcube-command').show();
-                if (typeof(muttcube.modes.insert.prev_mode() == 'command')){
-                    muttcube.commands.finish_command();
-                    muttcube.commands.change_mode(this.prev_mode());
-                }
             },
             finish: function(){
                 muttcube.exec_on_enter = true;
