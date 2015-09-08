@@ -44,7 +44,7 @@ $(function() {
             }
             if (ev.which == 13 && muttcube.current_mode == 'insert' && muttcube.modes[muttcube.current_mode].prev_mode() == 'command'){
                 muttcube.commands.change_mode(muttcube.modes[muttcube.current_mode].prev_mode());
-                muttcube.commands.change_mode(muttcube.modes[muttcube.current_mode].prev_mode());
+                muttcube.commands.execute_command();
             }
             return true;
         }
