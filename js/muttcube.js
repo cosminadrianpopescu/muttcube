@@ -774,6 +774,7 @@ var muttcube = {
 
         execute_command: function(){
             this.finish_command();
+            this.change_mode(muttcube.modes[muttcube.current_mode].prev_mode());
         },
 
         enter_command_mode: function(){
