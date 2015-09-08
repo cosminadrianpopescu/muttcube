@@ -206,6 +206,9 @@ var muttcube = {
                 return rcmail;
             },
             finish: function(){
+                if ($('*:focus').attr('id') == 'muttcube-command-input'){
+                    console.log('command mode');
+                }
                 $(document.activeElement).blur();
             }
         },
