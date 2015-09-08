@@ -1,5 +1,20 @@
 var $$ = muttcube.selector;
 
+function check_editor(){
+    if (typeof(rcmail.editor) == 'undefined'){
+        setTimeout('check_editor()', 100);
+    }
+    else {
+        if (rcmail.editor.editor != null){
+            console.log('tinimyce', $('body', $('#composebody_ifr').contents()));
+            $('body', $('#composebody_ifr').contents()).keydown(function(ev){
+                console.log('key in tinymce');
+                return true;
+            });
+        }
+    }
+}
+
 $(function() {
     muttcube.set_start_mode();
     muttcube.set_status_bar();
@@ -20,13 +35,7 @@ $(function() {
     });
 
     if (rcmail.env.action == 'compose'){
-        if (rcmail.editor.editor != null){
-            console.log('tinimyce', $('body', $('#composebody_ifr').contents()));
-            $('body', $('#composebody_ifr').contents()).keydown(function(ev){
-                console.log('key in tinymce');
-                return true;
-            });
-        }
+        check_editor();
     }
 
     function muttcube_key_handle(ev){
