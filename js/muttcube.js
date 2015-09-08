@@ -274,8 +274,8 @@ var muttcube = {
                 muttcube.exec_on_enter = false;
                 if (this.from_insert){
                     this.from_insert = false;
+                    this.finish_command();
                     muttcube.commands.change_mode(this.prev_mode());
-                    $('#muttcube-command').hide();
                 }
                 else {
                     $('#muttcube-statusbar-message').hide();
