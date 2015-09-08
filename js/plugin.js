@@ -2,7 +2,7 @@ var $$ = muttcube.selector;
 
 function wait_tinymce(){
     if ($('#composebody_ifr').length == 0){
-        setTimeout('wait_timeout()', 100);
+        setTimeout('wait_tinymce()', 100);
     }
     else {
         console.log('not null', $('#composebody_ifr'));
