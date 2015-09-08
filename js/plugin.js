@@ -19,14 +19,14 @@ $(function() {
         }
     });
 
-    console.log('length', $('#composebody_ifr'));
-
-    if (rcmail.env.action == 'compose' && $('#composebody_ifr').length > 0){
-        console.log('tinimyce', $('body', $('#composebody_ifr').contents()));
-        $('body', $('#composebody_ifr').contents()).keydown(function(ev){
-            console.log('key in tinymce');
-            return true;
-        });
+    if (rcmail.env.action == 'compose'){
+        if (rcmail.editor.editor != null){
+            console.log('tinimyce', $('body', $('#composebody_ifr').contents()));
+            $('body', $('#composebody_ifr').contents()).keydown(function(ev){
+                console.log('key in tinymce');
+                return true;
+            });
+        }
     }
 
     function muttcube_key_handle(ev){
