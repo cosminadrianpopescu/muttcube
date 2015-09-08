@@ -42,6 +42,9 @@ $(function() {
             if (ev.which == 27){
                 muttcube.commands.change_mode(muttcube.modes.insert.prev_mode());
             }
+            else if (ev.which == 13 && $('*:focus').attr('id') == 'muttcube-command-input'){
+                muttcube.commands.execute_command();
+            }
             return true;
         }
 
