@@ -125,10 +125,10 @@ MuttatorKeys = {
             },
         },
         key_0001__59: {
-            command: "muttcube.commands.enter_command_mode()",
+            command: "muttcube.commands.read_command()",
         },
         key_0001__186: {
-            command: "muttcube.commands.enter_command_mode()",
+            command: "muttcube.commands.read_command()",
         },
         key_0000__191: {
             command: "$('#quicksearchbox').focus()",
@@ -398,11 +398,6 @@ MuttatorKeys = {
         },
         key_0000__13: {
             command: "muttcube._rcmail.compose_add_recipient('to')",
-        },
-    },
-    mode_command: {
-        key_0000__13: {
-            command: "muttcube.commands.execute_js()",
         },
     },
 }

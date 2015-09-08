@@ -15,7 +15,7 @@ $(function() {
         }
     }).blur(function(ev){
         if ($(ev.currentTarget).attr('id') != 'muttcube-focus'){
-            muttcube.commands.change_mode(muttcube.modes[muttcube.current_mode].prev_mode());
+            muttcube.commands.change_mode(muttcube.modes.insert.prev_mode());
         }
     });
 
@@ -40,11 +40,7 @@ $(function() {
         }
         if (($("*:focus").is("textarea, input") && $('*:focus').attr('id') != 'muttcube-focus')) {
             if (ev.which == 27){
-                muttcube.commands.change_mode(muttcube.modes[muttcube.current_mode].prev_mode());
-            }
-            if (ev.which == 13 && muttcube.current_mode == 'insert' && muttcube.modes[muttcube.current_mode].prev_mode() == 'command'){
-                muttcube.commands.change_mode(muttcube.modes[muttcube.current_mode].prev_mode());
-                muttcube.commands.execute_command();
+                muttcube.commands.change_mode(muttcube.modes.insert.prev_mode());
             }
             return true;
         }

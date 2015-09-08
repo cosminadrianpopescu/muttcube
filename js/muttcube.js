@@ -206,9 +206,6 @@ var muttcube = {
                 return rcmail;
             },
             finish: function(){
-                if ($('*:focus').attr('id') == 'muttcube-command-input'){
-                    muttcube.modes.command.from_insert = true;
-                }
                 $(document.activeElement).blur();
             }
         },
@@ -235,7 +232,6 @@ var muttcube = {
         contacts: {
             text: muttcube_i18n.gettext('contactsmode.txt'), 
             comming_from: null, 
-            from_insert: false, 
             get_context: function(){
                 return $(document);
             },
@@ -258,34 +254,6 @@ var muttcube = {
                 muttcube.exec_on_enter = true;
             },
         },
-        command: {
-            text: muttcube_i18n.gettext('commandmode.txt'), 
-            from_insert: false, 
-            get_context: function(){
-                return $(document);
-            },
-            prev_mode: function(){
-                return muttcube._rcmail.env.action == "" ? 'normal' : 'compose';
-            },
-            get_rcmail: function(){
-                return rcmail;
-            },
-            init: function(){
-                muttcube.exec_on_enter = false;
-                if (this.from_insert){
-                    this.from_insert = false;
-                    muttcube.commands.finish_command();
-                    muttcube.commands.change_mode(this.prev_mode());
-                }
-                else {
-                    $('#muttcube-statusbar-message').hide();
-                    $('#muttcube-command').show();
-                }
-            },
-            finish: function(){
-                muttcube.exec_on_enter = true;
-            },
-        }
     }, 
 
     get_message_frame: function(){
@@ -779,19 +747,11 @@ var muttcube = {
             muttcube.print_status_bar(muttcube.disabled ? muttcube_i18n.gettext("disabled") : "");
         },
 
-        finish_command: function(){
-            $('#muttcube-statusbar-message').show();
-            $('#muttcube-command').hide();
+        read_command: function(){
+            $('#muttcube-statusbar-message').hide();
+            $('#muttcube-command').show();
+            $('#muttcube-command-input').focus();
         },
-
-        execute_command: function(){
-            this.finish_command();
-        },
-
-        enter_command_mode: function(){
-            this.change_mode('command');
-            $('#muttcube-command-input').focus().width($('#muttcube-statusbar').width() - $('#muttcube-statusbar-current-mode').width() - $('#muttcube-statusbar-keychain').width() - 10);
-        }
     },
 };
 
