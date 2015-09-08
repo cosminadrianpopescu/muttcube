@@ -7,8 +7,9 @@ function wait_tinymce(){
     else {
         console.log('not null', $('#composebody_ifr'));
         $('body', $('#composebody_ifr').contents()).keydown(function(ev){
-            console.log('key in tinymce');
-            return true;
+            if (ev.which == 27){
+                $('#_to', $(top.document)).focus();
+            }
         });
     }
 }
