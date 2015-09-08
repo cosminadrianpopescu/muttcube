@@ -7,11 +7,14 @@ function check_editor(){
     }
     else {
         if (rcmail.editor.editor != null){
-            console.log('tinimyce', $('body', $('#composebody_ifr').contents()));
+            console.log('not null');
             $('body', $('#composebody_ifr').contents()).keydown(function(ev){
                 console.log('key in tinymce');
                 return true;
             });
+        }
+        else {
+            console.log('null');
         }
     }
 }
