@@ -37,7 +37,11 @@ $(function() {
             wait_tinymce();
         }
         else {
-            console.log("jsvi", editor);
+            if (typeof(editor) != 'undefined'){
+                $('#composebody').focus(function(){
+                    editor(this);
+                });
+            }
         }
     }
 
