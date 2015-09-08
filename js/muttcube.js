@@ -750,7 +750,7 @@ var muttcube = {
         read_command: function(){
             $('#muttcube-statusbar-message').hide();
             $('#muttcube-command').show();
-            $('#muttcube-command-input').focus();
+            $('#muttcube-command-input').focus().width($('#muttcube-statusbar').width() - $('#muttcube-statusbar-current-mode').width() - $('#muttcube-statusbar-keychain').width() - 10);
         },
     },
 };
