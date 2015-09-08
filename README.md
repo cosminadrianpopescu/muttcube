@@ -47,7 +47,7 @@ Each mode has it's own shortcuts.
 
 In this mode you navigate the messages in your mailbox. 
 
-* `&lt;C-b&gt;`: page down
+* `<C-b>`: page down
 * `c`: compose new message
 * `d`: delete currently selected message
 * `f`: forward currently selected message
