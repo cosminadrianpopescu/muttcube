@@ -763,6 +763,15 @@ var muttcube = {
             $('#muttcube-command').show();
             $('#muttcube-command-input').val('').focus().width($('#muttcube-statusbar').width() - $('#muttcube-statusbar-current-mode').width() - $('#muttcube-statusbar-keychain').width() - 10);
         },
+
+        messagebody_focus: function(){
+            if ($('input[name="_is_html"]').val() != '1'){
+                $('#composebody').focus();
+            }
+            else {
+                tinymce.activeEditor.focus();
+            }
+        },
     },
 };
 

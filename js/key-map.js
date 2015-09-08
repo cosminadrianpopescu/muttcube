@@ -332,7 +332,7 @@ MuttatorKeys = {
             command: "muttcube.commands.change_mode('att_delete')",
         },
         key_0000_M: {
-            command: "tinymce.activeEditor.focus()",
+            command: "muttcube.commands.messagebody_focus()",
         },
         key_0000_Q: {
             command: "muttcube._rcmail.command('list')",
