@@ -272,16 +272,17 @@ var muttcube = {
             },
             init: function(){
                 muttcube.exec_on_enter = false;
-                $('#muttcube-statusbar-message').hide();
-                $('#muttcube-command').show();
                 if (this.from_insert){
                     this.from_insert = false;
                     muttcube.commands.change_mode(this.prev_mode());
                 }
+                else {
+                    $('#muttcube-statusbar-message').hide();
+                    $('#muttcube-command').show();
+                }
             },
             finish: function(){
                 muttcube.exec_on_enter = true;
-                this.finish_command();
             },
         }
     }, 
@@ -783,6 +784,7 @@ var muttcube = {
         },
 
         execute_command: function(){
+            this.finish_command();
         },
 
         enter_command_mode: function(){
