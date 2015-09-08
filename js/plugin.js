@@ -8,7 +8,7 @@ function wait_tinymce(){
         console.log('not null', $('#composebody_ifr'));
         $('body', $('#composebody_ifr').contents()).keydown(function(ev){
             if (ev.which == 27){
-                $('#_to', $(top.document)).focus();
+                $('#_to', $(top.document)).focus().blur();
             }
         });
     }
