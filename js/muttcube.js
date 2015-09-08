@@ -754,6 +754,8 @@ var muttcube = {
 
         execute_command: function(){
             $('#muttcube-command-input').blur();
+            var command = $('#muttcube-command-input').val();
+            eval('muttcube.' + command);
         },
 
         read_command: function(){
