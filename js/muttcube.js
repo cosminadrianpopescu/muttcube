@@ -235,7 +235,7 @@ var muttcube = {
         contacts: {
             text: muttcube_i18n.gettext('contactsmode.txt'), 
             comming_from: null, 
-            from_insert = false, 
+            from_insert: false, 
             get_context: function(){
                 return $(document);
             },
