@@ -754,7 +754,7 @@ var muttcube = {
 
         execute_command: function(){
             $('#muttcube-command-input').blur();
-        }
+        },
 
         read_command: function(){
             $('#muttcube-statusbar-message').hide();
