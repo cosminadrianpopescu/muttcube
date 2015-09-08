@@ -281,6 +281,7 @@ var muttcube = {
             },
             finish: function(){
                 muttcube.exec_on_enter = true;
+                this.finish_command();
             },
         }
     }, 
@@ -782,7 +783,6 @@ var muttcube = {
         },
 
         execute_command: function(){
-            this.finish_command();
         },
 
         enter_command_mode: function(){
