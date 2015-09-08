@@ -10,6 +10,9 @@ function wait_tinymce(){
             if (ev.which == 27){
                 $('#_to', $(top.document)).focus().blur();
             }
+            if (ev.which == 13){
+                console.log('focus', $('*:focus'));
+            }
         });
     }
 }
