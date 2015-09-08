@@ -1,23 +1,5 @@
 var $$ = muttcube.selector;
 
-function check_editor(){
-    if (typeof(rcmail.editor) == 'undefined'){
-        setTimeout('check_editor()', 100);
-    }
-    else {
-        if (rcmail.editor.editor != null){
-            console.log('not null');
-            $('body', $('#composebody_ifr').contents()).keydown(function(ev){
-                console.log('key in tinymce');
-                return true;
-            });
-        }
-        else {
-            console.log('null');
-        }
-    }
-}
-
 $(function() {
     muttcube.set_start_mode();
     muttcube.set_status_bar();
@@ -38,7 +20,13 @@ $(function() {
     });
 
     if (rcmail.env.action == 'compose'){
-        check_editor();
+        if ($('input[name="_is_html"]').val() == '1'){
+            console.log('not null');
+            $('body', $('#composebody_ifr').contents()).keydown(function(ev){
+                console.log('key in tinymce');
+                return true;
+            });
+        }
     }
 
     function muttcube_key_handle(ev){

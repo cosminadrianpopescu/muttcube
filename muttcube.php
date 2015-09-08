@@ -42,9 +42,4 @@ class muttcube extends rcube_plugin
         }
         return $p;
     }
-
-    function html_editor($mode){
-        die();
-        var_dump($mode); die();
-    }
 }
