@@ -772,6 +772,10 @@ var muttcube = {
             $('#muttcube-command').hide();
         },
 
+        execute_command: function(){
+            this.finish_command();
+        },
+
         enter_command_mode: function(){
             this.change_mode('command');
             $('#muttcube-command-input').focus().width($('#muttcube-statusbar').width() - $('#muttcube-statusbar-current-mode').width() - $('#muttcube-statusbar-keychain').width() - 10);
