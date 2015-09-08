@@ -19,6 +19,13 @@ $(function() {
         }
     });
 
+    if (rcmail.env.action == 'compose' && $('#composebody_ifr').length > 0){
+        $('body', $('#composebody_ifr').keydown(function(ev){
+            console.log('key in tinymce');
+            return true;
+        }))
+    }
+
     function muttcube_key_handle(ev){
         var flags = (ev.altKey ? '1' : '0') + 
             (ev.ctrlKey ? '1' : '0') + 
