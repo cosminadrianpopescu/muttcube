@@ -110,7 +110,6 @@ var muttcube = {
             init: function(){
                 if (rcmail.env.action == ''){
                     var div = $('#messagepreview, #messagebody', $('#messagecontframe', $(top.document)).contents());
-                    console.log('div is', div);
                     $('#messagecontframe')[0].contentWindow.muttcube.commands.change_mode('message_caret');
                     div.attr('contenteditable', "true");
                     div.focus();

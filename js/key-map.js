@@ -332,7 +332,7 @@ MuttatorKeys = {
             command: "muttcube.commands.change_mode('att_delete')",
         },
         key_0000_M: {
-            command: "$('#composebody').focus()",
+            command: "$('body', $('#composebody_ifr').contents()).children().first().focus()",
         },
         key_0000_Q: {
             command: "muttcube._rcmail.command('list')",
