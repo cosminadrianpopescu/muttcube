@@ -21,7 +21,7 @@ $(function() {
 
     if (rcmail.env.action == 'compose'){
         if ($('input[name="_is_html"]').val() == '1'){
-            console.log('not null');
+            console.log('not null', $('#composebody_ifr'));
             $('body', $('#composebody_ifr').contents()).keydown(function(ev){
                 console.log('key in tinymce');
                 return true;
