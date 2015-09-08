@@ -20,6 +20,7 @@ $(function() {
     });
 
     if (rcmail.env.action == 'compose' && $('#composebody_ifr').length > 0){
+        console.log('tinimyce', $('body', $('#composebody_ifr').contents()));
         $('body', $('#composebody_ifr').contents()).keydown(function(ev){
             console.log('key in tinymce');
             return true;
