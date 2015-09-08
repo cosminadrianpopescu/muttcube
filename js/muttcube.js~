@@ -274,7 +274,7 @@ var muttcube = {
                 muttcube.exec_on_enter = false;
                 if (this.from_insert){
                     this.from_insert = false;
-                    muttcube.commands.finish_command();
+                    this.finish_command();
                     muttcube.commands.change_mode(this.prev_mode());
                 }
                 else {
