@@ -35,8 +35,8 @@ class muttcube extends rcube_plugin
 
             $this->load_config();
             if ($rcmail->config->get('use_jsvi')){
-                $this->include_script('js/lib/vi.js');
-                $this->include_script('js/lib/vi.css');
+                $this->include_script('js/lib/jsvi/vi.js');
+                $this->include_script('js/lib/jsvi/vi.css');
             }
         }
     }
