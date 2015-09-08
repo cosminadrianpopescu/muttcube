@@ -1,7 +1,7 @@
 var $$ = muttcube.selector;
 
 function check_editor(){
-    console.log('check editor', rcmail.editor);
+    console.log('check editor', rcmail.editor.editor);
     if (typeof(rcmail.editor) == 'undefined'){
         setTimeout('check_editor()', 100);
     }
