@@ -747,6 +747,11 @@ var muttcube = {
             muttcube.print_status_bar(muttcube.disabled ? muttcube_i18n.gettext("disabled") : "");
         },
 
+        finish_command: function(){
+            $('#muttcube-statusbar-message').show();
+            $('#muttcube-command').hide();
+        },
+
         read_command: function(){
             $('#muttcube-statusbar-message').hide();
             $('#muttcube-command').show();
