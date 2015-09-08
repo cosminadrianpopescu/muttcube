@@ -34,7 +34,10 @@ class muttcube extends rcube_plugin
             $this->add_texts('localization', true);
 
             $this->load_config();
-            var_dump($rcmail->config->get('use_jsvi', 0)); die();
+            if ($rcmail->config->get('use_jsvi')){
+                $this->include_script('js/lib/vi.js');
+                $this->include_script('js/lib/vi.css');
+            }
         }
     }
 

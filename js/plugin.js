@@ -5,13 +5,9 @@ function wait_tinymce(){
         setTimeout('wait_tinymce()', 100);
     }
     else {
-        console.log('not null', $('#composebody_ifr'));
         $('body', $('#composebody_ifr').contents()).keydown(function(ev){
             if (ev.which == 27){
                 $('#_to', $(top.document)).focus().blur();
-            }
-            if (ev.which == 13){
-                console.log('focus', $('*:focus'));
             }
         });
     }
@@ -39,6 +35,9 @@ $(function() {
     if (rcmail.env.action == 'compose'){
         if ($('input[name="_is_html"]').val() == '1'){
             wait_tinymce();
+        }
+        else {
+            console.log("jsvi", editor);
         }
     }
 
