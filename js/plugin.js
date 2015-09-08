@@ -39,7 +39,7 @@ $(function() {
             return true;
         }
         if (($("*:focus").is("textarea, input") && $('*:focus').attr('id') != 'muttcube-focus')) {
-            if (ev.which == 27 || ev.which = 13){
+            if (ev.which == 27 || ev.which == 13){
                 muttcube.commands.change_mode(muttcube.modes[muttcube.current_mode].prev_mode());
             }
             return true;
