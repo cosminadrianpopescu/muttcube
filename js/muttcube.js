@@ -207,7 +207,7 @@ var muttcube = {
             },
             finish: function(){
                 if ($('*:focus').attr('id') == 'muttcube-command-input'){
-                    muttcube.commands.modes.command.from_insert = true;
+                    muttcube.modes.commands.command.from_insert = true;
                 }
                 $(document.activeElement).blur();
             }
