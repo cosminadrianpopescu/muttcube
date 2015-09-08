@@ -1,5 +1,18 @@
 var $$ = muttcube.selector;
 
+function wait_tinymce(){
+    if ($('#composebody_ifr').length == 0){
+        setTimeout('wait_timeout()', 100);
+    }
+    else {
+        console.log('not null', $('#composebody_ifr'));
+        $('body', $('#composebody_ifr').contents()).keydown(function(ev){
+            console.log('key in tinymce');
+            return true;
+        });
+    }
+}
+
 $(function() {
     muttcube.set_start_mode();
     muttcube.set_status_bar();
@@ -21,11 +34,7 @@ $(function() {
 
     if (rcmail.env.action == 'compose'){
         if ($('input[name="_is_html"]').val() == '1'){
-            console.log('not null', $('#composebody_ifr'));
-            $('body', $('#composebody_ifr').contents()).keydown(function(ev){
-                console.log('key in tinymce');
-                return true;
-            });
+            wait_tinymce();
         }
     }
 
