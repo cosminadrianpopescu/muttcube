@@ -207,7 +207,7 @@ var muttcube = {
             },
             finish: function(){
                 if ($('*:focus').attr('id') == 'muttcube-command-input'){
-                    console.log('command mode');
+                    muttcube.commands.modes.command.from_insert = true;
                 }
                 $(document.activeElement).blur();
             }
@@ -235,6 +235,7 @@ var muttcube = {
         contacts: {
             text: muttcube_i18n.gettext('contactsmode.txt'), 
             comming_from: null, 
+            from_insert = false, 
             get_context: function(){
                 return $(document);
             },
@@ -259,6 +260,7 @@ var muttcube = {
         },
         command: {
             text: muttcube_i18n.gettext('commandmode.txt'), 
+            from_insert: false, 
             get_context: function(){
                 return $(document);
             },
@@ -272,6 +274,10 @@ var muttcube = {
                 muttcube.exec_on_enter = false;
                 $('#muttcube-statusbar-message').hide();
                 $('#muttcube-command').show();
+                if (this.from_insert){
+                    this.from_insert = false;
+                    muttcube.commands.change_mode(this.prev_mode());
+                }
             },
             finish: function(){
                 muttcube.exec_on_enter = true;
@@ -777,7 +783,6 @@ var muttcube = {
 
         execute_command: function(){
             this.finish_command();
-            this.change_mode(muttcube.modes[muttcube.current_mode].prev_mode());
         },
 
         enter_command_mode: function(){
