@@ -3180,7 +3180,6 @@ function _redraw_term_force() {
 	while (term.firstChild) term.removeChild(term.firstChild);
 }
 function _redraw_term() {
-    console.log('size begin', $('#composebody').width());
 
 	var h = term_rows;
 	var w = term_cols;
@@ -3649,6 +3648,7 @@ function editor(t) {
 	backing.style.position = 'absolute';
 	backing.style.bottom = '0px';
 	backing.style.right = '0px';
+    console.log('backing', backing);
 	backing.style.width = '1px';
 	backing.style.height = '1px';
 	backing.style.visibility = 'hidden';
@@ -3791,7 +3791,6 @@ function editor(t) {
 
 	cursor.style.display = 'inline';
 	_cursor_fix();
-    console.log('size before timer', $('#composebody').width());
 	window.setTimeout(term_redraw,1);
 	term_resize();
 
