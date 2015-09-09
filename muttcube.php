@@ -12,8 +12,6 @@
 /** *
  **/
 
-error_reporting(E_ALL);
-
 class muttcube extends rcube_plugin
 {
     public $task = 'mail|compose';
@@ -32,12 +30,6 @@ class muttcube extends rcube_plugin
             $this->include_script('js/plugin.js');
             $this->add_hook('template_container', array($this, 'html_output'));
             $this->add_texts('localization', true);
-
-            $this->load_config();
-            if ($rcmail->config->get('use_jsvi')){
-                $this->include_script('js/lib/jsvi/vi.js');
-                $this->include_stylesheet('js/lib/jsvi/vi.css');
-            }
         }
     }
 
