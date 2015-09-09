@@ -3786,6 +3786,7 @@ function editor(t) {
 	}
 	// fix
     console.log('dim', $(t).width());
+    console.log('composebody', $('#composebody').width());
 	t.value = term_freeze();
 	_term_update_printer();
 
