@@ -46,7 +46,7 @@ $(function() {
     }
 
     function muttcube_key_handle(ev){
-        if (typeof(vi) != 'undefined' && $('.vi:visible').length > 0){
+        if (typeof(vi) != 'undefined' && $('.editor:visible').length > 0){
             return true;
         }
         var flags = (ev.altKey ? '1' : '0') + 
