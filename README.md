@@ -57,5 +57,5 @@ In this mode you navigate the messages in your mailbox.
 * `fx`: clear all filters
 * `fd`: filter deleted messages
 * `fD`: filter undeleted messages
-* `&lt;C-f&gt;`: page up
+* `<C-f>`: page up
 
