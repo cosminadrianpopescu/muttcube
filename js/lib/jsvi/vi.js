@@ -3558,7 +3558,6 @@ function editor_disable(sav) {
 
 	_cbrestore();
 
-    console.log('formelement', term._formelement);
 	if (term._formelement) {
 		if (sav) term._formelement.value = term_freeze();
 
@@ -3786,6 +3785,7 @@ function editor(t) {
 		tags[j] = aa[1];
 	}
 	// fix
+    console.log('dim', $(t).width());
 	t.value = term_freeze();
 	_term_update_printer();
 
