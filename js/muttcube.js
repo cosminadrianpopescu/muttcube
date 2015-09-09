@@ -1,5 +1,5 @@
 var muttcube = {
-    current_mode: rcmail.env.action == "" ? 'normal' : 'compose', 
+    current_mode: null, 
     start_mode: null, 
     root: null,
     chain_timeout_id: null,
@@ -28,9 +28,11 @@ var muttcube = {
     set_start_mode: function(){
         this.start_mode = 'normal';
         if (rcmail.env.action == 'show' || rcmail.env.action == 'preview'){
+            this.start_mode = 'message';
             this.commands.change_mode('message');
         }
         else if (rcmail.env.action == 'compose'){
+            this.start_mode = 'compose';
             this.commands.change_mode('compose');
         }
         else {
