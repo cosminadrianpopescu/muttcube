@@ -40,6 +40,7 @@ $(function() {
             if (typeof(editor) != 'undefined'){
                 $('#composebody').focus(function(){
                     editor(this);
+                    console.log('w', $(this).width());
                 });
             }
         }
