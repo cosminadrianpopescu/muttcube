@@ -3648,7 +3648,6 @@ function editor(t) {
 	backing.style.position = 'absolute';
 	backing.style.bottom = '0px';
 	backing.style.right = '0px';
-    console.log('backing', backing);
 	backing.style.width = '1px';
 	backing.style.height = '1px';
 	backing.style.visibility = 'hidden';

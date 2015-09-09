@@ -39,8 +39,10 @@ $(function() {
         else {
             if (typeof(editor) != 'undefined'){
                 $('#composebody').focus(function(){
+                    muttcube.editor_dim = {w: $('#composebody').width(), h: $('#composebody').height()};
                     editor(this);
-                    console.log('w', $(this).width());
+                }).blur(function(e){
+                    $(this).width(muttcube.editor_dim.w).height(muttcube.editor_dim.h);
                 });
             }
         }

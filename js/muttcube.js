@@ -8,6 +8,7 @@ var muttcube = {
     exec_on_enter: true,
     ignore_keys: {'i_45': 1},
     disabled: false,
+    editor_dim = {}, 
 
     get_ui: function(){
         if (typeof(UI) != 'undefined'){
