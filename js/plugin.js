@@ -42,6 +42,7 @@ $(function() {
                     muttcube.editor_dim = {w: $('#composebody').width(), h: $('#composebody').height()};
                     editor(this);
                 }).on('vi-quit', function(ev){
+                    console.log('vi quit');
                     $(this).width(muttcube.editor_dim.w).height(muttcube.editor_dim.h);
                 });
             }
