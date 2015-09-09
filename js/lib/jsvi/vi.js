@@ -3558,6 +3558,7 @@ function editor_disable(sav) {
 
 	_cbrestore();
 
+    console.log('formelement', term._formelement);
 	if (term._formelement) {
 		if (sav) term._formelement.value = term_freeze();
 
