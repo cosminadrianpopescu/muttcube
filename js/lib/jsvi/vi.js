@@ -3593,7 +3593,7 @@ function editor_disable(sav) {
 
 	document.body.style.overflow = '';
 
-    $(term._formelement).trigger('vi-quit', []);
+    $(term._formelement).trigger('vi_quit', []);
 }
 function _cursor_fix() {
 	term_cur_width = cursor.offsetWidth;
