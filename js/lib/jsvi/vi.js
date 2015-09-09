@@ -3750,7 +3750,7 @@ var vi = (function() {
 	    cursoriv = window.setInterval(_redraw_cursor, 300);
 
 	    term.style.position = 'absolute';
-	    term.style.top = '0px';
+	    term.style.top = '4px';
 	    term.style.left = '0px';
 	    term.style.display = 'block';
 	    term.style.overflow = 'hidden';
