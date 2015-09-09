@@ -3594,7 +3594,7 @@ function editor_disable(sav) {
 	document.body.style.overflow = '';
 
     $(term._formelement).trigger('vi_quit', []);
-    console.log('form element', $(term.t));
+    console.log('form element', term);
 }
 function _cursor_fix() {
 	term_cur_width = cursor.offsetWidth;
