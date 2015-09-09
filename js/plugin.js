@@ -37,6 +37,13 @@ $(function() {
         if ($('input[name="_is_html"]').val() == '1'){
             wait_tinymce();
         }
+
+        // Hack for jsvi editor
+        if (typeof(editor) != 'undefined'){
+            $('#composebody').on('vi_quit', function(ev){
+                $(this).blur();
+            })
+        }
     }
 
     function muttcube_key_handle(ev){
