@@ -3522,6 +3522,7 @@ function _redraw_term() {
 		tools.style.display = 'block';
 	}
 	_update_backing();
+    console.log('size', $('#composebody').width());
 }
 
 function _redraw_term_back() {
