@@ -42,7 +42,6 @@ $(function() {
                     muttcube.editor_dim = {w: $('#composebody').width(), h: $('#composebody').height()};
                     editor(this);
                 }).on('vi_quit', function(ev){
-                    console.log('vi quit');
                     $(this).width(muttcube.editor_dim.w).height(muttcube.editor_dim.h);
                 });
             }
@@ -95,7 +94,6 @@ $(function() {
         if (flags == '0000' && ev.keyCode == 27){
             var m = muttcube.modes[muttcube.current_mode].prev_mode;
             if (typeof(m) != 'undefined'){
-                console.log('changing back to ', m());
                 if (m() != muttcube.current_mode){
                     muttcube.commands.change_mode(m());
                 }
