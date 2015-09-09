@@ -3180,6 +3180,7 @@ function _redraw_term_force() {
 	while (term.firstChild) term.removeChild(term.firstChild);
 }
 function _redraw_term() {
+    console.log('size begin', $('#composebody').width());
 
 	var h = term_rows;
 	var w = term_cols;
