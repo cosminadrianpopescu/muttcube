@@ -42,11 +42,7 @@ $(function() {
                     muttcube.editor_dim = {w: $('#composebody').width(), h: $('#composebody').height()};
                     editor(this);
                 }).blur(function(e){
-                    if (typeof(muttcube.editor_dim) != 'undefined'){
-                        if (mutcube.editor_dim != {}){
-                            $(this).width(muttcube.editor_dim.w).height(muttcube.editor_dim.h);
-                        }
-                    }
+                    $(this).width(muttcube.editor_dim.w).height(muttcube.editor_dim.h);
                 });
             }
         }
