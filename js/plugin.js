@@ -37,16 +37,16 @@ $(function() {
             wait_tinymce();
         }
         else {
-            if (typeof(vi) != 'undefined'){
+            if (typeof(editor) != 'undefined'){
                 $('#composebody').focus(function(){
-                    vi(this);
+                    editor(this);
                 });
             }
         }
     }
 
     function muttcube_key_handle(ev){
-        if (typeof(vi) != 'undefined' && $('.editor:visible').length > 0){
+        if (typeof(editor) != 'undefined' && $('.editor:visible').length > 0){
             return true;
         }
         var flags = (ev.altKey ? '1' : '0') + 
