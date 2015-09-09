@@ -507,9 +507,10 @@ var muttcube = {
         change_mode: function(mode){
             console.log('i am ', window.location.toString());
             console.log('changing to ', mode);
-            console.log('muttcub', muttcube.current_mode, muttcube.modes);
-            if (typeof(muttcube.modes[muttcube.current_mode].finish) != 'undefined'){
-                muttcube.modes[muttcube.current_mode].finish();
+            if (muttcube.current_mode != null){
+                if (typeof(muttcube.modes[muttcube.current_mode].finish) != 'undefined'){
+                    muttcube.modes[muttcube.current_mode].finish();
+                }
             }
             muttcube.current_mode = mode;
             var m = muttcube.modes[mode];
