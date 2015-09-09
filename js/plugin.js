@@ -28,7 +28,6 @@ $(function() {
         }
     }).blur(function(ev){
         if ($(ev.currentTarget).attr('id') != 'muttcube-focus'){
-            console.log('blur and change mode', $(this));
             muttcube.commands.change_mode(muttcube.modes.insert.prev_mode());
         }
     });

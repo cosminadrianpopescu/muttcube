@@ -245,6 +245,7 @@ var muttcube = {
             init: function(){
                 muttcube.exec_on_enter = false;
                 if (this.comming_from != '/'){
+                    muttcube.modes.insert.old_mode = muttcube.start_mode;
                     if ($('#contacts-table tr').length == 0){
                         muttcube.commands.change_mode(this.prev_mode());
                     }
