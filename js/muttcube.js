@@ -1,5 +1,5 @@
 var muttcube = {
-    current_mode: 'normal', 
+    current_mode: rcmail.env.action == "" ? 'normal' : 'compose', 
     start_mode: null, 
     root: null,
     chain_timeout_id: null,
