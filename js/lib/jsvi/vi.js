@@ -3785,13 +3785,13 @@ function editor(t) {
 		tags[j] = aa[1];
 	}
 	// fix
-    console.log('dim', $(t).width());
-    console.log('composebody', $('#composebody').width());
 	t.value = term_freeze();
 	_term_update_printer();
 
 	cursor.style.display = 'inline';
 	_cursor_fix();
+    console.log('dim', $(t).width());
+    console.log('composebody', $('#composebody').width());
 	window.setTimeout(term_redraw,1);
 	term_resize();
 
