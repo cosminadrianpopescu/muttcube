@@ -37,6 +37,7 @@ var term_rows;
 var term_win_width;
 var term_win_height;
 var term_cur_width;
+var textarea = null;
 
 var tools;
 var suggest;
@@ -3558,7 +3559,6 @@ function editor_disable(sav) {
 
 	_cbrestore();
 
-    console.log('form element', term);
 	if (term._formelement) {
 		if (sav) term._formelement.value = term_freeze();
 
@@ -3594,7 +3594,7 @@ function editor_disable(sav) {
 
 	document.body.style.overflow = '';
 
-    $(term._formelement).trigger('vi_quit', []);
+    $(textarea).trigger('vi_quit', []);
 }
 function _cursor_fix() {
 	term_cur_width = cursor.offsetWidth;
@@ -3702,6 +3702,7 @@ function editor(t) {
 	term.style.fontSize = '100%';
 	_zmp(term);
 	term._formelement = t;
+    textarea = t;
 	document.body.style.overflow = 'hidden';
 	tools.style.display = 'block';
 
