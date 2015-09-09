@@ -3523,7 +3523,6 @@ function _redraw_term() {
 		tools.style.display = 'block';
 	}
 	_update_backing();
-    console.log('size', $('#composebody').width());
 }
 
 function _redraw_term_back() {
@@ -3792,6 +3791,7 @@ function editor(t) {
 
 	cursor.style.display = 'inline';
 	_cursor_fix();
+    console.log('size before timer', $('#composebody').width());
 	window.setTimeout(term_redraw,1);
 	term_resize();
 
