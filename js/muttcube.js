@@ -197,7 +197,7 @@ var muttcube = {
             },
             prev_mode: function(){
                 if (this.old_mode == null){
-                    return 'normal';
+                    return muttcube.start_mode;
                 }
                 return this.old_mode;
             },
