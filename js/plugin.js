@@ -36,22 +36,9 @@ $(function() {
         if ($('input[name="_is_html"]').val() == '1'){
             wait_tinymce();
         }
-        else {
-            if (typeof(editor) != 'undefined'){
-                $('#composebody').focus(function(){
-                    muttcube.editor_dim = {w: $('#composebody').width(), h: $('#composebody').height()};
-                    editor(this);
-                }).on('vi_quit', function(ev){
-                    $(this).width(muttcube.editor_dim.w).height(muttcube.editor_dim.h);
-                });
-            }
-        }
     }
 
     function muttcube_key_handle(ev){
-        if (typeof(editor) != 'undefined' && $('.editor:visible').length > 0){
-            return true;
-        }
         var flags = (ev.altKey ? '1' : '0') + 
             (ev.ctrlKey ? '1' : '0') + 
             (ev.metaKey ? '1' : '0') + 
