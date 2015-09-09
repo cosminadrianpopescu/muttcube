@@ -3797,7 +3797,7 @@ function editor(t) {
 
 	_cbw('resize', term_resize);
 	_cbw('beforeprint', _term_update_printer);
+	_update_backing();
     console.log('dim', $(t).width());
     console.log('composebody', $('#composebody').width());
-	_update_backing();
 }
