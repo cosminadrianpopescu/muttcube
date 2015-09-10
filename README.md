@@ -40,6 +40,7 @@ The plugin will add the following modes to roundcube:
 * Insert
 * Attachments delete
 * Contacts search
+* Command mode
 
 Each mode has it's own shortcuts. 
 
@@ -58,4 +59,14 @@ In this mode you navigate the messages in your mailbox.
 * `fd`: filter deleted messages
 * `fD`: filter undeleted messages
 * `<C-f>`: page up
-
+* `g`: go to the first message
+* `G`: go to the last message
+* `j`: go to the next message
+* `k`: go to the previous message
+* `<C-l>`: refresh the messages list
+* `m`: change to message mode
+* `mu`: mark currently selected message as unread
+* `mr`: mark currently selected message as read
+* `*f`: performs a quick search for the from field (goes to the next message
+  in the list from the same sender)
+* `n`: go to the next quick search result
