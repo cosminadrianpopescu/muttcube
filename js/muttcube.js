@@ -271,7 +271,7 @@ var muttcube = {
     open_in_new_tab: function(url){
         var a = muttcube_tpl.render('muttator_new_window', {url: url});
         $('body', $(top.document)).append(a);
-        console.log('a is ', a);
+        // console.log('a is ', a);
         $('#muttator_new_window_a')[0].click();
         $('#muttator_new_window_a').remove();
     },
@@ -506,8 +506,8 @@ var muttcube = {
         },
 
         change_mode: function(mode){
-            console.log('i am ', window.location.toString());
-            console.log('changing to ', mode);
+            // console.log('i am ', window.location.toString());
+            // console.log('changing to ', mode);
             if (muttcube.current_mode != null){
                 if (typeof(muttcube.modes[muttcube.current_mode].finish) != 'undefined'){
                     muttcube.modes[muttcube.current_mode].finish();
@@ -707,8 +707,8 @@ var muttcube = {
 
         first_or_last_contact: function(which){
             var row = $('#contacts-table tr')[which]();
-            console.log('the row is', row);
-            console.log('the id is ', this.get_contact_row_id(row));
+            // console.log('the row is', row);
+            // console.log('the id is ', this.get_contact_row_id(row));
             muttcube._rcmail.contact_list.select_row(this.get_contact_row_id(row));
         },
 
@@ -759,7 +759,7 @@ var muttcube = {
         execute_command: function(){
             $('#muttcube-command-input').blur();
             var command = $('#muttcube-command-input').val();
-            console.log('command is', command);
+            // console.log('command is', command);
             eval('muttcube.' + command);
         },
 

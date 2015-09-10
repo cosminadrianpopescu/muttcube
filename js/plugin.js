@@ -47,7 +47,6 @@ $(function() {
 
     function muttcube_key_handle(ev){
         // Hack for jsvi_editor (if used)
-        console.log('muttcube', ev);
         if (typeof(editor) != 'undefined' && $('.editor:visible').length > 0){
             return true;
         }
