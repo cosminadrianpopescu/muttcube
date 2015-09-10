@@ -77,6 +77,9 @@ MuttatorKeys = {
         key_0000_R: {
             command: "muttcube._rcmail.command('reply')",
         },
+        key_0001_R: {
+            command: "muttcube._rcmail.command('reply-all')",
+        },
         key_0000_S: {
             command: "muttcube._rcmail.command('viewsource')",
         },
@@ -101,9 +104,6 @@ MuttatorKeys = {
                     command: 'muttcube._rcmail.message_list.expand_all()',
                 },
             },
-        },
-        key_0001_R: {
-            command: "muttcube._rcmail.command('reply-all')",
         },
         key_0000_T: {
             command: "muttcube.commands.open_in_new_tab()",
