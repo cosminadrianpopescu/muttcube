@@ -1,19 +1,22 @@
 {
-  "name":"cosminadrianpopescu/muttcube",
-  "description":"Sets shortcuts like muttator and adds modes",
-  "license":"GPL-2.0",
-  "homepage":"https://github.com/cosminadrianpopescu/muttcube",
-  "type": "roundcube-plugin",
-  "authors": [
-          {
-              "name": "Cosmin Popescu",
-              "email": "cosmin@popescu.eu.com",
-              "homepage": "http://popescu.eu.com",
-              "role": "Developer"
-          }
-      ],
-  "support": {
-          "email": "cosmin@popescu.eu.com",
-          "issues": "https://github.com/cosminadrianpopescu/muttcube/issues"
-      }
+    "name":"cosminadrianpopescu/muttcube",
+    "description":"Sets shortcuts like muttator and adds modes",
+    "license":"GPL-2.0",
+    "homepage":"https://github.com/cosminadrianpopescu/muttcube",
+    "type": "roundcube-plugin",
+    "authors": [
+        {
+            "name": "Cosmin Popescu",
+            "email": "cosmin@popescu.eu.com",
+            "homepage": "http://popescu.eu.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "jqueryui": "*"
+    },
+    "support": {
+        "email": "cosmin@popescu.eu.com",
+        "issues": "https://github.com/cosminadrianpopescu/muttcube/issues"
+    }
 }
