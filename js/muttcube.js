@@ -770,8 +770,7 @@ var muttcube = {
         },
 
         messagebody_focus: function(){
-            console.log('tinymce', tinymce, tynimce.activeEditor);
-            if ($('input[name="_is_html"]').val() != '1'){
+            if ($('input[name="_is_html"]').val() != '1' || typeof(tinymce) == 'undefined'){
                 $('#composebody').focus();
             }
             else {
