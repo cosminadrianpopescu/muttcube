@@ -770,7 +770,7 @@ var muttcube = {
         },
 
         messagebody_focus: function(){
-            if ($('input[name="_is_html"]').val() != '1' || typeof(tinymce) == 'undefined'){
+            if ($('input[name="_is_html"]').val() != '1' || typeof(tinymce) == 'undefined' || tinymce.activeEditor == null){
                 $('#composebody').focus();
             }
             else {
