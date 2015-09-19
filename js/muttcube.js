@@ -79,7 +79,7 @@ var muttcube = {
         },
         follow_links: {
             text: muttcube_i18n.gettext("followliksmode.text"), 
-            selector: '#messagebody a,#attachment-list a[class != "drop"]',
+            selector: '#messagebody a,#attachment-list a[class != "drop"], #message-objects a',
             init: function(){
                 muttcube.exec_on_enter = false;
                 var n = 1;
