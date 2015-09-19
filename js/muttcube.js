@@ -262,7 +262,7 @@ var muttcube = {
         if ($('#messagecontframe').length > 0){
             return $('#messagecontframe', $(top.document))[0].contentWindow;
         }
-        if ($('messagecontent').length > 0){
+        if ($('#messagecontent').length > 0){
             return $('#messagecontent')[0];
         }
         return $('#messagepreview, #messagebody')[0];
