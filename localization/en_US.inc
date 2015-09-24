@@ -1,7 +1,5 @@
 <?php
 
-error_reporting(E_ALL);
-
 $labels = array(
     "normalmode.text" => 'MESSAGE LIST', 
     "messagemode.text" => "MESSAGE", 
