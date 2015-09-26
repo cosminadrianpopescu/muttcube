@@ -410,6 +410,9 @@ var muttcube = {
                     muttcube._rcmail.message_list.select_row(row.uid, muttcube.current_mode == 'visual' ? SHIFT_KEY : 0);
                     muttcube._rcmail.message_list.scrollto(row.uid);
                 }
+                else {
+                    muttcube._rcmail.message_list.select_first();
+                }
             }
         },
 
