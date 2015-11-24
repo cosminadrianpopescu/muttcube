@@ -45,7 +45,7 @@ var muttcube = {
         bar.width($(window).width() - 10).offset({left: 5, top: $(window).height() - bar.height() - 5});
     },
 
-    print_status_bar(text, section){
+    print_status_bar: function(text, section){
         if (typeof(section) == 'undefined' || section == null){
             section = 'message';
         }
