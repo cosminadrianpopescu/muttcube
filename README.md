@@ -98,6 +98,7 @@ messages list.
 * `/`: enter search mails mode (focuses the search box)
 * `]]`: goes to the next page
 * `[[`: goes to previous page
+* `Shift-f`: switch to "Folders select" mode
 
 ### Message mode
 
