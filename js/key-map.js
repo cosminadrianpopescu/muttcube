@@ -1,5 +1,5 @@
 MuttatorKeys = {
-    key_disable: 'key_1000_D', 
+    key_disable: 'key_1000_D',
     mode_normal: {
         key_0100_B: {
             command: "muttcube.commands.move_page('prev')",
@@ -52,10 +52,10 @@ MuttatorKeys = {
             command: "muttcube.commands.go_message('get_prev_row')",
         },
         key_0100_L: {
-            command: "muttcube._rcmail.refresh()", 
+            command: "muttcube._rcmail.refresh()",
         },
         key_0000_M: {
-            command: 'muttcube.commands.change_mode("message")', 
+            command: 'muttcube.commands.change_mode("message")',
             chain: {
                 key_0000_U: {
                     command: "muttcube._rcmail.command('mark', 'unread')",
@@ -117,10 +117,10 @@ MuttatorKeys = {
         key_0001_3: {
             chain: {
                 key_0000_F: {
-                    command: 'muttcube.commands.quick_search("from", -1)', 
+                    command: 'muttcube.commands.quick_search("from", -1)',
                 },
                 key_0000_T: {
-                    command: 'muttcube.commands.quick_search("to", -1)', 
+                    command: 'muttcube.commands.quick_search("to", -1)',
                 },
             },
         },
@@ -136,24 +136,24 @@ MuttatorKeys = {
         key_0001_8: {
             chain: {
                 key_0000_F: {
-                    command: 'muttcube.commands.quick_search("from", 1)', 
+                    command: 'muttcube.commands.quick_search("from", 1)',
                 },
                 key_0000_T: {
-                    command: 'muttcube.commands.quick_search("to", 1)', 
+                    command: 'muttcube.commands.quick_search("to", 1)',
                 },
             },
         },
         key_0000__221: {
             chain: {
                 key_0000__221: {
-                    command: 'muttcube._rcmail.command("nextpage")', 
+                    command: 'muttcube._rcmail.command("nextpage")',
                 },
             },
         },
         key_0000__219: {
             chain: {
                 key_0000__219: {
-                    command: 'muttcube._rcmail.command("previouspage")', 
+                    command: 'muttcube._rcmail.command("previouspage")',
                 },
             },
         },
@@ -198,51 +198,51 @@ MuttatorKeys = {
         key_0000__221: {
             chain: {
                 key_0000__221: {
-                    command: 'muttcube._rcmail.command("nextmessage")', 
+                    command: 'muttcube._rcmail.command("nextmessage")',
                 },
             },
         },
         key_0000__219: {
             chain: {
                 key_0000__219: {
-                    command: 'muttcube._rcmail.command("previousmessage")', 
+                    command: 'muttcube._rcmail.command("previousmessage")',
                 },
             },
         },
     },
     mode_follow_links: {
         key_0000_0: {
-            command: 'muttcube.commands.follow_links_key_press(0)', 
+            command: 'muttcube.commands.follow_links_key_press(0)',
         },
         key_0000_1: {
-            command: 'muttcube.commands.follow_links_key_press(1)', 
+            command: 'muttcube.commands.follow_links_key_press(1)',
         },
         key_0000_2: {
-            command: 'muttcube.commands.follow_links_key_press(2)', 
+            command: 'muttcube.commands.follow_links_key_press(2)',
         },
         key_0000_3: {
-            command: 'muttcube.commands.follow_links_key_press(3)', 
+            command: 'muttcube.commands.follow_links_key_press(3)',
         },
         key_0000_4: {
-            command: 'muttcube.commands.follow_links_key_press(4)', 
+            command: 'muttcube.commands.follow_links_key_press(4)',
         },
         key_0000_5: {
-            command: 'muttcube.commands.follow_links_key_press(5)', 
+            command: 'muttcube.commands.follow_links_key_press(5)',
         },
         key_0000_6: {
-            command: 'muttcube.commands.follow_links_key_press(6)', 
+            command: 'muttcube.commands.follow_links_key_press(6)',
         },
         key_0000_7: {
-            command: 'muttcube.commands.follow_links_key_press(7)', 
+            command: 'muttcube.commands.follow_links_key_press(7)',
         },
         key_0000_8: {
-            command: 'muttcube.commands.follow_links_key_press(8)', 
+            command: 'muttcube.commands.follow_links_key_press(8)',
         },
         key_0000_9: {
-            command: 'muttcube.commands.follow_links_key_press(9)', 
+            command: 'muttcube.commands.follow_links_key_press(9)',
         },
         key_0000__13: {
-            command: 'muttcube.commands.follow_first_link()', 
+            command: 'muttcube.commands.follow_first_link()',
         },
         key_0100_B: {
             command: 'muttcube.commands.message_page_move(-1)',
@@ -285,7 +285,7 @@ MuttatorKeys = {
             command: "muttcube.commands.go_message('get_prev_row')",
         },
         key_0000__13: {
-            command: 'muttcube.commands.normal_with_selection()', 
+            command: 'muttcube.commands.normal_with_selection()',
         },
     },
     mode_folders: {
@@ -302,7 +302,7 @@ MuttatorKeys = {
             command: "muttcube.commands.move_folder(-1)",
         },
         key_0000__13: {
-            command: "muttcube.commands.change_folder()", 
+            command: "muttcube.commands.change_folder()",
         },
         key_0000_Z: {
             chain: {
@@ -341,23 +341,23 @@ MuttatorKeys = {
             command: "$('#compose-subject').focus()",
         },
         key_0000_T: {
-            command: "$('#_to').focus()",
+            command: $('ul.recipient-input input').tagName ? "$('ul.recipient-input input').focus()" :  "$('#_to').focus()",
         },
         key_0000_U: {
-            command: "muttcube.commands.upload_attachments()", 
+            command: "muttcube.commands.upload_attachments()",
         },
         key_0000_X: {
             chain: {
                 key_0000_B: {
-                    command: "muttcube.commands.compose_header('hide', 'bcc')", 
+                    command: "muttcube.commands.compose_header('hide', 'bcc')",
                 },
                 key_0000_C: {
-                    command: "muttcube.commands.compose_header('hide', 'cc')", 
+                    command: "muttcube.commands.compose_header('hide', 'cc')",
                 },
             },
         },
         key_0000_Y: {
-            command: "muttcube._rcmail.command('send', '')", 
+            command: "muttcube._rcmail.command('send', '')",
         },
         key_0000__191: {
             command: "muttcube.commands.search_contacts()",

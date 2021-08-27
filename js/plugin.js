@@ -22,7 +22,8 @@ $(function() {
     });
 
    # change selector based on skin
-   if (document.querySelector('ul').id) {
+   var selector = '';
+   if (document.querySelector('div#compose_to')) {
         selector = "ul textarea, ul input, input#compose-subject, textarea#composebody";
     } else {
         selector = "textarea, input";
