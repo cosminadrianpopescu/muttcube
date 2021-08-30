@@ -21,7 +21,13 @@ $(function() {
         return muttcube_key_handle(e);
     });
 
-    $("textarea, input").focus(function(ev){
+   if (document.querySelector('div#compose_to')) {
+        selector = "ul textarea, ul input, input#compose-subject, textarea#composebody";
+    } else {
+        selector = "textarea, input";
+    }
+
+    $(selector).focus(function(ev){
         if ($(ev.currentTarget).attr('id') != 'muttcube-focus' && $(ev.currentTarget).attr('type') != 'file'){
             muttcube.modes.insert.old_mode = muttcube.current_mode;
             muttcube.commands.change_mode("insert");
