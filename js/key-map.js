@@ -341,7 +341,7 @@ MuttatorKeys = {
             command: "$('#compose-subject').focus()",
         },
         key_0000_T: {
-            command: "$('#_to').focus()",
+            command: $('ul.recipient-input input').tagName ? "$('ul.recipient-input input').focus()" :  "$('#_to').focus()",
         },
         key_0000_U: {
             command: "muttcube.commands.upload_attachments()", 
